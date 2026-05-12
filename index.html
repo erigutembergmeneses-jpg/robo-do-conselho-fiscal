@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Robô do Conselho Fiscal - Assistente virtual especializado em fiscalização condominial">
+    <title>🤖 Robô do Conselho Fiscal</title>
+    
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-content">
+                <h1>🤖 Robô do Conselho Fiscal</h1>
+                <p>Treinado com o livro <strong>"Conselho Fiscal 4.0"</strong></p>
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span>IA online</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                <div class="message-avatar">📚</div>
+                <div class="message-content">
+                    <div class="message-text">
+                        Olá! Sou o Robô do Conselho Fiscal.<br><br>
+                        Posso ajudar com dúvidas sobre:<br>
+                        • Análise de balancetes e prestação de contas<br>
+                        • Verificação de documentos fiscais<br>
+                        • Geração de pareceres e notificações<br>
+                        • Legislação condominial (Lei 4.591/64)<br><br>
+                        <strong>Como posso ajudá-lo hoje?</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <div class="input-container">
+                <input type="text" 
+                       id="userInput" 
+                       placeholder="Digite sua pergunta aqui..." 
+                       autocomplete="off">
+                <button id="sendButton" onclick="enviarMensagem()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+            <div class="input-suggestions">
+                <span class="suggestion" onclick="enviarSugestao('Como analisar um balancete?')">📊 Analisar balancete</span>
+                <span class="suggestion" onclick="enviarSugestao('Gerar notificação para o síndico')">📄 Gerar notificação</span>
+                <span class="suggestion" onclick="enviarSugestao('O que verificar em uma ata?')">📋 Verificar ata</span>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <span>⚖️</span> Respostas baseadas no conteúdo do livro "Conselho Fiscal 4.0". Em casos complexos, consulte um advogado especializado.
+        </div>
+    </div>
+
+    <!-- Link para o arquivo JS externo -->
+    <script src="script.js"></script>
+</body>
+</html>
